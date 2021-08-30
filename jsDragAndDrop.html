@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Drag and drop - Mastering Selenium</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/jsdadapi.css?v=' | append: site.github.build_revision | relative_url }}">
+    <link rel="icon" type="image/png" href="/assets/favicon.ico"/>
+</head>
+<body>
+<div id="main">
+    <h1>Drag and drop</h1>
+    <p>Drop items onto the red square to remove them</p>
+    <div id="obliterate"></div>
+    <ul>
+        <li>
+            <div id="one" href="#" class="draggable">one</div>
+        </li>
+        <li>
+            <div id="two" href="#" class="draggable">two</div>
+        </li>
+        <li>
+            <div id="three" href="#" class="draggable">three</div>
+        </li>
+        <li>
+            <div id="four" href="#" class="draggable">four</div>
+        </li>
+        <li>
+            <div id="five" href="#" class="draggable">five</div>
+        </li>
+    </ul>
+</div>
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script type="application/javascript">
+    $(function () {
+        $(".draggable").draggable();
+
+        $('#obliterate').droppable({
+            drop: function (event, ui) {
+                ui.draggable.remove();
+            }
+        });
+    });
+</script>
+</html>
