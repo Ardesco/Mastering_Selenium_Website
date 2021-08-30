@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CSS Menu</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/auiapi.css?v=' | append: site.github.build_revision | relative_url }}">
+</head>
+<body>
+<nav>
+    <ul>
+        <li id="home">Home</li>
+        <li id="about">About</li>
+        <li id="services"> Services
+            <ul id="hover_menu">
+                <li onclick="populateDiv('Web Design clicked!')">Web Design</li>
+                <li onclick="populateDiv('Web Development clicked!')">Web Development</li>
+                <li onclick="populateDiv('Illustrations clicked!')">Illustrations</li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+<div id="button_clicked"></div>
+</body>
+<script>
+    function populateDiv(text) {
+        document.getElementById('button_clicked').innerHTML = text;
+    }
+</script>
+</html>

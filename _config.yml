@@ -22,7 +22,7 @@ url: "https://www.masteringselenium.com"
 markdown: kramdown
 
 sass:
-#  style: compressed
+  style: compressed
   sass_dir: _sass
 plugins:
   - jekyll-redirect-from
