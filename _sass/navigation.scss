@@ -1,0 +1,51 @@
+@import "constants";
+
+nav {
+  background-color: $color_white;
+  font-family: Roboto, serif;
+  line-height: 4rem;
+  font-size: 1.5rem;
+
+  .padding {
+    width: 1rem;
+    height: 4rem;
+    float: left;
+  }
+
+  #logo {
+    height: 4rem;
+    width: 20rem;
+    margin: 1rem 0;
+    float: left;
+    color: transparent;
+    background-image: url(/assets/images/logo.svg);
+    background-repeat: no-repeat;
+  }
+
+  #links {
+    height: 4rem;
+    margin: 1rem 0;
+    padding-right: 1rem;
+    float: right;
+
+    a {
+      padding: 0 1rem;
+      color: black;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: $color_orange;
+      opacity: 0.9;
+    }
+
+    .active {
+      color: $color_orange;
+      opacity: 1;
+    }
+  }
+
+  #end {
+    clear: both;
+  }
+}
